@@ -3,6 +3,8 @@
 $params = require(__DIR__ . '/params.php');
 
 $config = [
+    'language' => 'ru-Ru',
+    'defaultRoute' => 'category/index',
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
@@ -44,6 +46,7 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                'category/<id:\d+>' => 'category/view',//Указываем урл для меню категории
             ],
         ],
 
